@@ -18,6 +18,7 @@
 		44243BAD2948BF4B00F75EC8 /* ArcEnCielUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44243BAC2948BF4B00F75EC8 /* ArcEnCielUITestsLaunchTests.swift */; };
 		44243BBA2948C01200F75EC8 /* SFPRODISPLAYBOLD.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 44243BB92948C01200F75EC8 /* SFPRODISPLAYBOLD.OTF */; };
 		44243BBC2948C07D00F75EC8 /* SFPRODISPLAYMEDIUM.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 44243BBB2948C07D00F75EC8 /* SFPRODISPLAYMEDIUM.OTF */; };
+		44243BC12948C8D100F75EC8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44243BC02948C8D100F75EC8 /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		44243BAC2948BF4B00F75EC8 /* ArcEnCielUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcEnCielUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		44243BB92948C01200F75EC8 /* SFPRODISPLAYBOLD.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYBOLD.OTF; sourceTree = "<group>"; };
 		44243BBB2948C07D00F75EC8 /* SFPRODISPLAYMEDIUM.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYMEDIUM.OTF; sourceTree = "<group>"; };
+		44243BC02948C8D100F75EC8 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 		44243BBF2948C35900F75EC8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				44243BC02948C8D100F75EC8 /* LogInViewController.swift */,
 				44243B8D2948BF4A00F75EC8 /* ViewController.swift */,
 			);
 			path = Controller;
@@ -290,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44243BC12948C8D100F75EC8 /* LogInViewController.swift in Sources */,
 				44243B8E2948BF4A00F75EC8 /* ViewController.swift in Sources */,
 				44243B8A2948BF4A00F75EC8 /* AppDelegate.swift in Sources */,
 				44243B8C2948BF4A00F75EC8 /* SceneDelegate.swift in Sources */,
