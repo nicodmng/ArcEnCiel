@@ -16,6 +16,8 @@
 		44243BA12948BF4B00F75EC8 /* ArcEnCielTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44243BA02948BF4B00F75EC8 /* ArcEnCielTests.swift */; };
 		44243BAB2948BF4B00F75EC8 /* ArcEnCielUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44243BAA2948BF4B00F75EC8 /* ArcEnCielUITests.swift */; };
 		44243BAD2948BF4B00F75EC8 /* ArcEnCielUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44243BAC2948BF4B00F75EC8 /* ArcEnCielUITestsLaunchTests.swift */; };
+		44243BBA2948C01200F75EC8 /* SFPRODISPLAYBOLD.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 44243BB92948C01200F75EC8 /* SFPRODISPLAYBOLD.OTF */; };
+		44243BBC2948C07D00F75EC8 /* SFPRODISPLAYMEDIUM.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 44243BBB2948C07D00F75EC8 /* SFPRODISPLAYMEDIUM.OTF */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		44243BA62948BF4B00F75EC8 /* ArcEnCielUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArcEnCielUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44243BAA2948BF4B00F75EC8 /* ArcEnCielUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcEnCielUITests.swift; sourceTree = "<group>"; };
 		44243BAC2948BF4B00F75EC8 /* ArcEnCielUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcEnCielUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		44243BB92948C01200F75EC8 /* SFPRODISPLAYBOLD.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYBOLD.OTF; sourceTree = "<group>"; };
+		44243BBB2948C07D00F75EC8 /* SFPRODISPLAYMEDIUM.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYMEDIUM.OTF; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				44243B922948BF4B00F75EC8 /* Assets.xcassets */,
 				44243B942948BF4B00F75EC8 /* LaunchScreen.storyboard */,
 				44243B972948BF4B00F75EC8 /* Info.plist */,
+				44243BB92948C01200F75EC8 /* SFPRODISPLAYBOLD.OTF */,
+				44243BBB2948C07D00F75EC8 /* SFPRODISPLAYMEDIUM.OTF */,
 			);
 			path = ArcEnCiel;
 			sourceTree = "<group>";
@@ -231,6 +237,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44243BBC2948C07D00F75EC8 /* SFPRODISPLAYMEDIUM.OTF in Resources */,
+				44243BBA2948C01200F75EC8 /* SFPRODISPLAYBOLD.OTF in Resources */,
 				44243B962948BF4B00F75EC8 /* LaunchScreen.storyboard in Resources */,
 				44243B932948BF4B00F75EC8 /* Assets.xcassets in Resources */,
 				44243B912948BF4A00F75EC8 /* Main.storyboard in Resources */,
