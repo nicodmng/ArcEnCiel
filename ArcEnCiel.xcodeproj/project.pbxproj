@@ -105,10 +105,10 @@
 			children = (
 				44243B892948BF4A00F75EC8 /* AppDelegate.swift */,
 				44243B8B2948BF4A00F75EC8 /* SceneDelegate.swift */,
-				44243B8D2948BF4A00F75EC8 /* ViewController.swift */,
-				44243B8F2948BF4A00F75EC8 /* Main.storyboard */,
+				44243BBD2948C34500F75EC8 /* Model */,
+				44243BBE2948C35300F75EC8 /* View */,
+				44243BBF2948C35900F75EC8 /* Controller */,
 				44243B922948BF4B00F75EC8 /* Assets.xcassets */,
-				44243B942948BF4B00F75EC8 /* LaunchScreen.storyboard */,
 				44243B972948BF4B00F75EC8 /* Info.plist */,
 				44243BB92948C01200F75EC8 /* SFPRODISPLAYBOLD.OTF */,
 				44243BBB2948C07D00F75EC8 /* SFPRODISPLAYMEDIUM.OTF */,
@@ -131,6 +131,30 @@
 				44243BAC2948BF4B00F75EC8 /* ArcEnCielUITestsLaunchTests.swift */,
 			);
 			path = ArcEnCielUITests;
+			sourceTree = "<group>";
+		};
+		44243BBD2948C34500F75EC8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		44243BBE2948C35300F75EC8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				44243B8F2948BF4A00F75EC8 /* Main.storyboard */,
+				44243B942948BF4B00F75EC8 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		44243BBF2948C35900F75EC8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				44243B8D2948BF4A00F75EC8 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
