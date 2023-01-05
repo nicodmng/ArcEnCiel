@@ -26,6 +26,7 @@
 		44416A0D2965659400457DA6 /* AddEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44416A0C2965659400457DA6 /* AddEventController.swift */; };
 		44F66BBE2966DA2400C6D0BE /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F66BBD2966DA2400C6D0BE /* HomeController.swift */; };
 		44F66BC02966ECAC00C6D0BE /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F66BBF2966ECAC00C6D0BE /* SettingsController.swift */; };
+		44F66BC22967251700C6D0BE /* CornerRadiusExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F66BC12967251700C6D0BE /* CornerRadiusExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		44416A0C2965659400457DA6 /* AddEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventController.swift; sourceTree = "<group>"; };
 		44F66BBD2966DA2400C6D0BE /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		44F66BBF2966ECAC00C6D0BE /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		44F66BC12967251700C6D0BE /* CornerRadiusExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				44416A06296447F300457DA6 /* CircularImageView.swift */,
+				44F66BC12967251700C6D0BE /* CornerRadiusExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44F66BC22967251700C6D0BE /* CornerRadiusExtension.swift in Sources */,
 				44416A07296447F300457DA6 /* CircularImageView.swift in Sources */,
 				44243BC12948C8D100F75EC8 /* LogInViewController.swift in Sources */,
 				44416A0D2965659400457DA6 /* AddEventController.swift in Sources */,
