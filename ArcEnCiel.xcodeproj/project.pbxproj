@@ -31,6 +31,7 @@
 		44811598296C1C3600FE3E73 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44811597296C1C3600FE3E73 /* CollectionViewCell.swift */; };
 		4481159E296C4F2200FE3E73 /* EventViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4481159D296C4F2200FE3E73 /* EventViewCell.xib */; };
 		44E7620129754EF50054C5DE /* FloatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E7620029754EF50054C5DE /* FloatButton.swift */; };
+		44EF214929756CB900FCEE37 /* InformationViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44EF214829756CB900FCEE37 /* InformationViewCell.xib */; };
 		44F66BBE2966DA2400C6D0BE /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F66BBD2966DA2400C6D0BE /* HomeController.swift */; };
 		44F66BC02966ECAC00C6D0BE /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F66BBF2966ECAC00C6D0BE /* SettingsController.swift */; };
 		44F66BC22967251700C6D0BE /* CornerRadiusExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F66BC12967251700C6D0BE /* CornerRadiusExtension.swift */; };
@@ -81,6 +82,7 @@
 		44811597296C1C3600FE3E73 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		4481159D296C4F2200FE3E73 /* EventViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventViewCell.xib; sourceTree = "<group>"; };
 		44E7620029754EF50054C5DE /* FloatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatButton.swift; sourceTree = "<group>"; };
+		44EF214829756CB900FCEE37 /* InformationViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationViewCell.xib; sourceTree = "<group>"; };
 		44F66BBD2966DA2400C6D0BE /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		44F66BBF2966ECAC00C6D0BE /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		44F66BC12967251700C6D0BE /* CornerRadiusExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusExtension.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				4481159D296C4F2200FE3E73 /* EventViewCell.xib */,
+				44EF214829756CB900FCEE37 /* InformationViewCell.xib */,
 			);
 			path = "Cell View";
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				44243B962948BF4B00F75EC8 /* LaunchScreen.storyboard in Resources */,
 				44243B932948BF4B00F75EC8 /* Assets.xcassets in Resources */,
 				44243B912948BF4A00F75EC8 /* Main.storyboard in Resources */,
+				44EF214929756CB900FCEE37 /* InformationViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
