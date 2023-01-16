@@ -20,13 +20,14 @@ class HomeController: UIViewController {
     @IBOutlet weak var statutLabel: UILabel!
     @IBOutlet weak var profilImageView: UIImageView!
     
+    @IBOutlet weak var infoCollectionView: UICollectionView!
+    
+    
     @IBAction func profilButton(_ sender: UIButton) {
         print("Test button OK")
     }
     
-    @IBAction func addInformationButton(_ sender: UIButton) {
-        print("Add info button OK")
-    }
+
     
     
     // MARK: - Lifecycle

@@ -12,8 +12,8 @@ class AddEventController: UIViewController {
     
     // MARK: - Properties
     
-    
-    
+    var buttonIsSelected = true
+
     // MARK: - IBOutlets & IBActions
     
     @IBOutlet weak var descriptionEventTextField: UITextField!
@@ -25,43 +25,19 @@ class AddEventController: UIViewController {
         guard let teamsButton = sender as? UIButton else {
             return
         }
-        
         switch teamsButton.tag {
-        case 0 :
-            teamsButton.layer.borderWidth = 2
-            teamsButton.cornerRadius = 20
-            teamsButton.layer.borderColor = UIColor.green.cgColor
-            
-        case 1 :
-            teamsButton.layer.borderWidth = 2
-            teamsButton.cornerRadius = 20
-            teamsButton.layer.borderColor = UIColor.green.cgColor
-            
-        case 2 :
-            teamsButton.layer.borderWidth = 2
-            teamsButton.cornerRadius = 20
-            teamsButton.layer.borderColor = UIColor.green.cgColor
-            
-        case 3 :
-            teamsButton.layer.borderWidth = 2
-            teamsButton.cornerRadius = 20
-            teamsButton.layer.borderColor = UIColor.green.cgColor
-            
-        case 4 :
-            teamsButton.layer.borderWidth = 2
-            teamsButton.cornerRadius = 20
-            teamsButton.layer.borderColor = UIColor.green.cgColor
-            
-        case 5 :
-            teamsButton.layer.borderWidth = 2
-            teamsButton.cornerRadius = 20
-            teamsButton.layer.borderColor = UIColor.green.cgColor
+        case 0...5 :
+            if buttonIsSelected {
+                changeButtonApparence(teamsButton: teamsButton)
+                buttonIsSelected = false
+            } else {
+                reinitialiseButtonApparence(teamsButton: teamsButton)
+                buttonIsSelected = true
+            }
         default :
             return
-            
         }
     }
-    
     
     @IBAction func recurrenceButton(_ sender: UIButton) {
         
@@ -84,5 +60,15 @@ class AddEventController: UIViewController {
     
     // MARK: - Methods
     
+    func changeButtonApparence(teamsButton: UIButton) {
+        teamsButton.layer.borderWidth = 2
+        teamsButton.cornerRadius = 20
+        teamsButton.layer.borderColor = UIColor.green.cgColor
+    }
+    
+    func reinitialiseButtonApparence(teamsButton: UIButton) {
+        teamsButton.layer.borderWidth = 0
+        teamsButton.cornerRadius = 20
+    }
     
 }
