@@ -19,11 +19,9 @@ class CalendarController: UIViewController {
     
     private let floatingButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
-
-        button.backgroundColor = .systemBlue
-        
         let image = UIImage(systemName: "plus", withConfiguration: UIImage.SymbolConfiguration(pointSize: 32, weight: .medium))
         
+        button.backgroundColor = .systemBlue
         button.setImage(image, for: .normal)
         button.tintColor = .white
         
@@ -32,8 +30,7 @@ class CalendarController: UIViewController {
         button.layer.shadowOpacity = 0.5
         
         // Corner radius
-        //button.layer.masksToBounds = true
-        button.layer.cornerRadius = 30
+        button.layer.cornerRadius = 35
         return button
     }()
     
@@ -50,6 +47,8 @@ class CalendarController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(floatingButton)
+        floatingButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+        
         setupCalendar()
 
         dateOfTheDayLabel.text = displayDateOfTheDay()
@@ -67,6 +66,17 @@ class CalendarController: UIViewController {
                                       y: view.frame.size.height - 180,
                                       width: 70,
                                       height: 70)
+    }
+    
+    @objc private func didTapButton() {
+        let storyboard = UIStoryboard(name: "Main", bundle: .none)
+        let addEventVC = storyboard.instantiateViewController(withIdentifier: "addEvent")
+        
+        addEventVC.modalPresentationStyle = .formSheet
+        
+        present(addEventVC, animated: true, completion: .none)
+        
+        print("test")
     }
     
     func setupCalendar() {
