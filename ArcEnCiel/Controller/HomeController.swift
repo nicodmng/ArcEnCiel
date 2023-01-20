@@ -51,7 +51,18 @@ class HomeController: UIViewController {
 
 // MARK: Extensions
 
-extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if collectionView == infoCollectionView {
+            return CGSize(width: 243.0, height: 182.0)
+        } else if collectionView == nextEventCollectionView {
+            return CGSize(width: 296.0, height: 172.0)
+        }
+        return CGSize()
+    }
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == infoCollectionView {
             return 10

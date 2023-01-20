@@ -7,11 +7,6 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="SFPRODISPLAYMEDIUM.OTF">
-            <string>SFProDisplay-Medium</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -22,22 +17,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-arc-en-ciel-du-genevois_detoure" translatesAutoresizingMaskIntoConstraints="NO" id="YZZ-Ie-Rfn">
-                                <rect key="frame" x="74" y="324.66666666666669" width="227" height="163"/>
+                                <rect key="frame" x="30.666666666666657" y="298" width="314" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="2D0-CK-2Gp"/>
+                                    <constraint firstAttribute="width" constant="314" id="NA2-4Q-LDW"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cx1-oa-6pV">
-                                <rect key="frame" x="132.66666666666666" y="607.66666666666663" width="110" height="28"/>
-                                <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="23"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="134" y="600" width="106" height="28"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="23"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Cx1-oa-6pV" firstAttribute="top" secondItem="YZZ-Ie-Rfn" secondAttribute="bottom" constant="120" id="8rU-Rt-Km2"/>
-                            <constraint firstItem="YZZ-Ie-Rfn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="WrG-qM-aF8"/>
-                            <constraint firstItem="Cx1-oa-6pV" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="kgv-wa-Nkm"/>
-                            <constraint firstItem="YZZ-Ie-Rfn" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="opn-jA-UCe"/>
+                            <constraint firstItem="YZZ-Ie-Rfn" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="2fA-gt-Lnv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cx1-oa-6pV" secondAttribute="trailing" constant="135" id="JPK-2v-9Kc"/>
+                            <constraint firstItem="Cx1-oa-6pV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="134" id="UEh-QU-DJ8"/>
+                            <constraint firstItem="YZZ-Ie-Rfn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="g2F-jD-aEK"/>
+                            <constraint firstItem="Cx1-oa-6pV" firstAttribute="top" secondItem="YZZ-Ie-Rfn" secondAttribute="bottom" constant="86" id="zKf-n7-JKl"/>
                         </constraints>
                     </view>
                 </viewController>
