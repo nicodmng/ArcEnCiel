@@ -18,7 +18,7 @@ class AddEventController: UIViewController {
     
     @IBOutlet weak var descriptionEventTextField: UITextField!
     @IBOutlet weak var datePickerView: UIDatePicker!
-    @IBOutlet weak var commentsTextVIew: UITextView!
+    @IBOutlet weak var commentsTextView: UITextView!
     @IBOutlet var teamsButton: [UIButton]!
     
     @IBAction func tappedTeamButton(_ sender: Any) {

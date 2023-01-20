@@ -21,13 +21,13 @@ class HomeController: UIViewController {
     @IBOutlet weak var profilImageView: UIImageView!
     
     @IBOutlet weak var infoCollectionView: UICollectionView!
-    
+    @IBOutlet weak var nextEventCollectionView: UICollectionView!
     
     @IBAction func profilButton(_ sender: UIButton) {
         print("Test button OK")
     }
     
-
+    
     
     
     // MARK: - Lifecycle
@@ -35,11 +35,12 @@ class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         profilImageView.makeRounded()
-
+        
         let nibName = UINib(nibName: "InfoViewCell", bundle: nil)
         infoCollectionView.register(nibName, forCellWithReuseIdentifier: "infoCell")
         
-        
+        let nibName2 = UINib(nibName: "NextEventViewCell", bundle: nil)
+        nextEventCollectionView.register(nibName2, forCellWithReuseIdentifier: "nextEventCell")
     }
     
     // MARK: - Methods
@@ -52,13 +53,24 @@ class HomeController: UIViewController {
 
 extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        if collectionView == infoCollectionView {
+            return 10
+        } else if collectionView == nextEventCollectionView {
+            return 5
+        }
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let infoCell = collectionView.dequeueReusableCell(withReuseIdentifier: "infoCell", for: indexPath)
-        return infoCell
+        if collectionView == self.infoCollectionView {
+            let infoCell = collectionView.dequeueReusableCell(withReuseIdentifier: "infoCell", for: indexPath)
+            return infoCell
+        } else if collectionView == self.nextEventCollectionView {
+            let nextEventCell = collectionView.dequeueReusableCell(withReuseIdentifier: "nextEventCell", for: indexPath)
+            return nextEventCell
+        }
+        return UICollectionViewCell()
     }
     
-
+    
 }
