@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="infoCell" id="c0z-2m-6QW">
+            <rect key="frame" x="0.0" y="0.0" width="243" height="182"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="CHi-Si-vAS">
+                <rect key="frame" x="0.0" y="0.0" width="243" height="182"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i9G-li-X3v">
+                        <rect key="frame" x="0.0" y="0.0" width="243" height="182"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZSC-sW-sH5">
+                                <rect key="frame" x="8" y="11" width="205" height="30"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="slL-jM-2PA">
+                                        <rect key="frame" x="0.0" y="0.99999999999999822" width="30" height="28.666666666666664"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="579-SL-PY7"/>
+                                            <constraint firstAttribute="height" constant="30" id="xDJ-l4-HE5"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information générale" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biz-DB-FQo">
+                                        <rect key="frame" x="35" y="0.0" width="170" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CRB-lh-VIq"/>
+                                </constraints>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="93K-Lv-HtK">
+                                <rect key="frame" x="8" y="45" width="205" height="101"/>
+                                <color key="backgroundColor" red="0.64705882349999999" green="0.80759298800000001" blue="0.91766673330000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="205" id="GUc-v3-cba"/>
+                                    <constraint firstAttribute="height" constant="101" id="eay-07-V5l"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow.right.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QJy-vd-tI3">
+                                <rect key="frame" x="205" y="144" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.6470588235294118" green="0.80759298800000001" blue="0.91766673330000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="93K-Lv-HtK" firstAttribute="leading" secondItem="i9G-li-X3v" secondAttribute="leading" constant="8" id="8v2-0o-QC2"/>
+                            <constraint firstItem="93K-Lv-HtK" firstAttribute="top" secondItem="ZSC-sW-sH5" secondAttribute="bottom" constant="4" id="ELv-WY-OoK"/>
+                            <constraint firstItem="ZSC-sW-sH5" firstAttribute="leading" secondItem="i9G-li-X3v" secondAttribute="leading" constant="8" id="pQ4-Rr-Seb"/>
+                            <constraint firstItem="ZSC-sW-sH5" firstAttribute="top" secondItem="i9G-li-X3v" secondAttribute="top" constant="11" id="zZp-kG-hma"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="i9G-li-X3v" secondAttribute="trailing" id="Ky6-Ci-NQH"/>
+                    <constraint firstItem="i9G-li-X3v" firstAttribute="leading" secondItem="CHi-Si-vAS" secondAttribute="leading" id="VpP-X2-ItN"/>
+                    <constraint firstAttribute="bottom" secondItem="i9G-li-X3v" secondAttribute="bottom" id="jmm-GN-rjV"/>
+                    <constraint firstItem="i9G-li-X3v" firstAttribute="top" secondItem="CHi-Si-vAS" secondAttribute="top" id="xhc-hu-liL"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="243" height="182"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="133.58778625954199" y="-240.14084507042256"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="arrow.right.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="info.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
