@@ -35,6 +35,9 @@ class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         profilImageView.makeRounded()
+
+        let nibName = UINib(nibName: "InfoViewCell", bundle: nil)
+        infoCollectionView.register(nibName, forCellWithReuseIdentifier: "infoCell")
         
         
     }
@@ -43,4 +46,19 @@ class HomeController: UIViewController {
     
     
     
+}
+
+// MARK: Extensions
+
+extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let infoCell = collectionView.dequeueReusableCell(withReuseIdentifier: "infoCell", for: indexPath)
+        return infoCell
+    }
+    
+
 }
