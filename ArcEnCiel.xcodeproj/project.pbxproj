@@ -21,6 +21,7 @@
 		44243BBA2948C01200F75EC8 /* SFPRODISPLAYBOLD.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 44243BB92948C01200F75EC8 /* SFPRODISPLAYBOLD.OTF */; };
 		44243BBC2948C07D00F75EC8 /* SFPRODISPLAYMEDIUM.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 44243BBB2948C07D00F75EC8 /* SFPRODISPLAYMEDIUM.OTF */; };
 		44243BC12948C8D100F75EC8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44243BC02948C8D100F75EC8 /* LogInViewController.swift */; };
+		442A9EC82982B63800395D9A /* ArcEnCiel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 442A9EC62982B63800395D9A /* ArcEnCiel.xcdatamodeld */; };
 		443012552971B47000918954 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443012542971B47000918954 /* Team.swift */; };
 		443012582971B4A600918954 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443012572971B4A600918954 /* Comment.swift */; };
 		4430125A2971B4D800918954 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443012592971B4D800918954 /* Alert.swift */; };
@@ -74,6 +75,7 @@
 		44243BB92948C01200F75EC8 /* SFPRODISPLAYBOLD.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYBOLD.OTF; sourceTree = "<group>"; };
 		44243BBB2948C07D00F75EC8 /* SFPRODISPLAYMEDIUM.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYMEDIUM.OTF; sourceTree = "<group>"; };
 		44243BC02948C8D100F75EC8 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		442A9EC72982B63800395D9A /* ArcEnCiel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ArcEnCiel.xcdatamodel; sourceTree = "<group>"; };
 		443012542971B47000918954 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		443012572971B4A600918954 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		443012592971B4D800918954 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 		44243BBD2948C34500F75EC8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				442A9EC52982B51700395D9A /* CoreData */,
 				44416A082964830300457DA6 /* User.swift */,
 				44416A0A2964831500457DA6 /* Event.swift */,
 				443012542971B47000918954 /* Team.swift */,
@@ -204,6 +207,14 @@
 				44811597296C1C3600FE3E73 /* CollectionViewCell.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		442A9EC52982B51700395D9A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				442A9EC62982B63800395D9A /* ArcEnCiel.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		44416A05296447CF00457DA6 /* Extensions */ = {
@@ -374,6 +385,7 @@
 				44243BC12948C8D100F75EC8 /* LogInViewController.swift in Sources */,
 				44416A0D2965659400457DA6 /* AddEventController.swift in Sources */,
 				44416A092964830300457DA6 /* User.swift in Sources */,
+				442A9EC82982B63800395D9A /* ArcEnCiel.xcdatamodeld in Sources */,
 				44243B8E2948BF4A00F75EC8 /* CalendarController.swift in Sources */,
 				44F66BBE2966DA2400C6D0BE /* HomeController.swift in Sources */,
 				44811594296C0F4F00FE3E73 /* DetailEventController.swift in Sources */,
@@ -745,6 +757,19 @@
 			productName = FSCalendar;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		442A9EC62982B63800395D9A /* ArcEnCiel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				442A9EC72982B63800395D9A /* ArcEnCiel.xcdatamodel */,
+			);
+			currentVersion = 442A9EC72982B63800395D9A /* ArcEnCiel.xcdatamodel */;
+			path = ArcEnCiel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 44243B7E2948BF4A00F75EC8 /* Project object */;
 }
