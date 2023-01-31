@@ -23,6 +23,7 @@
 		44243BC12948C8D100F75EC8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44243BC02948C8D100F75EC8 /* LogInViewController.swift */; };
 		442A9EC82982B63800395D9A /* ArcEnCiel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 442A9EC62982B63800395D9A /* ArcEnCiel.xcdatamodeld */; };
 		442A9ECA2982B6B600395D9A /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442A9EC92982B6B600395D9A /* CoreDataStack.swift */; };
+		442A9ECC2982BB8300395D9A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442A9ECB2982BB8300395D9A /* CoreDataManager.swift */; };
 		443012552971B47000918954 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443012542971B47000918954 /* Team.swift */; };
 		443012582971B4A600918954 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443012572971B4A600918954 /* Comment.swift */; };
 		4430125A2971B4D800918954 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443012592971B4D800918954 /* Alert.swift */; };
@@ -78,6 +79,7 @@
 		44243BC02948C8D100F75EC8 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		442A9EC72982B63800395D9A /* ArcEnCiel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ArcEnCiel.xcdatamodel; sourceTree = "<group>"; };
 		442A9EC92982B6B600395D9A /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		442A9ECB2982BB8300395D9A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		443012542971B47000918954 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		443012572971B4A600918954 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		443012592971B4D800918954 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			children = (
 				442A9EC62982B63800395D9A /* ArcEnCiel.xcdatamodeld */,
 				442A9EC92982B6B600395D9A /* CoreDataStack.swift */,
+				442A9ECB2982BB8300395D9A /* CoreDataManager.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				44E7620129754EF50054C5DE /* FloatButton.swift in Sources */,
 				44416A0B2964831500457DA6 /* Event.swift in Sources */,
 				4430125A2971B4D800918954 /* Alert.swift in Sources */,
+				442A9ECC2982BB8300395D9A /* CoreDataManager.swift in Sources */,
 				44243B8C2948BF4A00F75EC8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
