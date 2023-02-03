@@ -17,23 +17,6 @@ class CalendarController: UIViewController {
     var cellReuseIdentifer = "eventCell"
     var formatter = DateFormatter()
     
-    private let floatingButton: UIButton = {
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
-        let image = UIImage(systemName: "plus", withConfiguration: UIImage.SymbolConfiguration(pointSize: 32, weight: .medium))
-        
-        button.backgroundColor = .systemBlue
-        button.setImage(image, for: .normal)
-        button.tintColor = .white
-        
-        // Shadow
-        button.layer.shadowRadius = 5
-        button.layer.shadowOpacity = 0.5
-        
-        // Corner radius
-        button.layer.cornerRadius = 35
-        return button
-    }()
-    
     // IBOutlets & IBActions
     
     @IBOutlet weak var dateOfTheDayLabel: UILabel!
@@ -46,8 +29,6 @@ class CalendarController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(floatingButton)
-        floatingButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
         
         setupCalendar()
 
@@ -60,25 +41,6 @@ class CalendarController: UIViewController {
     
     // MARK: - Methods
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        floatingButton.frame = CGRect(x: view.frame.size.width - 60 - 30,
-                                      y: view.frame.size.height - 180,
-                                      width: 70,
-                                      height: 70)
-    }
-    
-    @objc private func didTapButton() {
-        let storyboard = UIStoryboard(name: "Main", bundle: .none)
-        let addEventVC = storyboard.instantiateViewController(withIdentifier: "addEvent")
-        
-        addEventVC.modalPresentationStyle = .formSheet
-        
-        present(addEventVC, animated: true, completion: .none)
-        
-        print("test")
-    }
-    
     func setupCalendar() {
         calendarView.scope = .week
         calendarView.delegate = self
@@ -89,6 +51,8 @@ class CalendarController: UIViewController {
         calendarView.weekdayHeight = 40
         calendarView.headerHeight = 22
         calendarView.appearance.todayColor = .systemBlue
+        calendarView.clipsToBounds = false
+        calendarView.register(MyCell.self, forCellReuseIdentifier: "cell")
 
     }
     
@@ -105,7 +69,11 @@ class CalendarController: UIViewController {
 extension CalendarController: FSCalendarDelegate, FSCalendarDataSource {
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        formatter.dateFormat = "dd MMMM yyyy"
+        formatter.dateFormat = "d MMMM yyyy"
+        dateOfTheDayLabel.text = formatter.string(from: date)
+    }
+    
+    func calendar(_ calendar: FSCalendar, didDeselect date: Date, at monthPosition: FSCalendarMonthPosition) {
         print("\(formatter.string(from: date))")
     }
     
@@ -126,6 +94,18 @@ extension CalendarController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250
+    }
+}
+
+class MyCell: FSCalendarCell {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        self.contentView.addSubview(UIImageView(image: UIImage(named: "portrait_2")))
+    }
+    
+    required init!(coder aDecoder: NSCoder!) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
 

@@ -12,7 +12,22 @@ class HomeController: UIViewController {
     
     // MARK: - Properties
     
-    
+    private let floatingButton: UIButton = {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        let image = UIImage(systemName: "plus", withConfiguration: UIImage.SymbolConfiguration(pointSize: 32, weight: .medium))
+        
+        button.backgroundColor = .systemBlue
+        button.setImage(image, for: .normal)
+        button.tintColor = .white
+        
+        // Shadow
+        button.layer.shadowRadius = 5
+        button.layer.shadowOpacity = 0.5
+        
+        // Corner radius
+        button.layer.cornerRadius = 35
+        return button
+    }()
     
     // MARK: - IBOutlets & IBActions
     
@@ -36,6 +51,9 @@ class HomeController: UIViewController {
         super.viewDidLoad()
         profilImageView.makeRounded()
         
+        view.addSubview(floatingButton)
+        floatingButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+        
         let nibName = UINib(nibName: "InfoViewCell", bundle: nil)
         infoCollectionView.register(nibName, forCellWithReuseIdentifier: "infoCell")
         
@@ -45,7 +63,24 @@ class HomeController: UIViewController {
     
     // MARK: - Methods
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        floatingButton.frame = CGRect(x: view.frame.size.width - 60 - 30,
+                                      y: view.frame.size.height - 180,
+                                      width: 70,
+                                      height: 70)
+    }
     
+    @objc private func didTapButton() {
+        let storyboard = UIStoryboard(name: "Main", bundle: .none)
+        let addEventVC = storyboard.instantiateViewController(withIdentifier: "addEvent")
+        
+        addEventVC.modalPresentationStyle = .formSheet
+        
+        present(addEventVC, animated: true, completion: .none)
+        
+        print("test")
+    }
     
 }
 
@@ -82,6 +117,5 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource, 
         }
         return UICollectionViewCell()
     }
-    
     
 }

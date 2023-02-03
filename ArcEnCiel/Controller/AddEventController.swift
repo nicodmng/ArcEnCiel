@@ -22,22 +22,10 @@ class AddEventController: UIViewController {
     @IBOutlet var teamsButton: [UIButton]!
     
     @IBAction func tappedTeamButton(_ sender: Any) {
-        guard let teamsButton = sender as? UIButton else {
-            return
-        }
-        switch teamsButton.tag {
-        case 0...5 :
-            if buttonIsSelected {
-                changeButtonApparence(teamsButton: teamsButton)
-                buttonIsSelected = false
-            } else {
-                reinitialiseButtonApparence(teamsButton: teamsButton)
-                buttonIsSelected = true
-            }
-        default :
-            return
-        }
+        circleGreenButtonApparence(sender: sender)
     }
+    
+
     
     @IBAction func recurrenceButton(_ sender: UIButton) {
         
@@ -55,10 +43,24 @@ class AddEventController: UIViewController {
     // MARK: - Lifecyle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
     }
     
     // MARK: - Methods
+    
+    func circleGreenButtonApparence(sender: Any) {
+        guard let teamButton = sender as? UIButton else {
+            return
+        }
+        let selectedButtonTag = teamButton.tag
+        for button in teamsButton {
+            if (button.tag == selectedButtonTag) {
+                changeButtonApparence(teamsButton: button)
+            } else {
+                reinitialiseButtonApparence(teamsButton: button)
+            }
+        }
+    }
     
     func changeButtonApparence(teamsButton: UIButton) {
         teamsButton.layer.borderWidth = 2
