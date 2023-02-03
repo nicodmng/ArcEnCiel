@@ -43,6 +43,7 @@ class CalendarController: UIViewController {
     
     func setupCalendar() {
         calendarView.scope = .week
+        calendar?.locale = Locale(identifier: "ar")
         calendarView.delegate = self
         calendarView.dataSource = self
         calendarView.firstWeekday = 2
@@ -52,7 +53,7 @@ class CalendarController: UIViewController {
         calendarView.headerHeight = 22
         calendarView.appearance.todayColor = .systemBlue
         calendarView.clipsToBounds = false
-        calendarView.register(MyCell.self, forCellReuseIdentifier: "cell")
+        calendarView.register(MyCell.self, forCellReuseIdentifier: "eventCell")
 
     }
     
@@ -66,6 +67,8 @@ class CalendarController: UIViewController {
 
 // MARK: - Extensions
 
+// Calendar
+
 extension CalendarController: FSCalendarDelegate, FSCalendarDataSource {
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
@@ -73,11 +76,9 @@ extension CalendarController: FSCalendarDelegate, FSCalendarDataSource {
         dateOfTheDayLabel.text = formatter.string(from: date)
     }
     
-    func calendar(_ calendar: FSCalendar, didDeselect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        print("\(formatter.string(from: date))")
-    }
-    
 }
+
+// TableView
 
 extension CalendarController: UITableViewDelegate, UITableViewDataSource {
     
@@ -86,9 +87,7 @@ extension CalendarController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let eventCell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifer, for: indexPath)
-                
         return eventCell
     }
     

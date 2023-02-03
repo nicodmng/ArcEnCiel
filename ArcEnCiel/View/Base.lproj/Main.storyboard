@@ -133,17 +133,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJ8-P9-J3v">
-                                <rect key="frame" x="15" y="107" width="64.666666666666671" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="ufP-8f-y1B"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="t3C-CL-ZoX">
-                                <rect key="frame" x="5" y="155" width="365" height="562"/>
+                                <rect key="frame" x="5" y="154.33333333333331" width="365" height="562.66666666666674"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L4t-if-n0q">
                                         <rect key="frame" x="11" y="0.0" width="343" height="163"/>
@@ -189,7 +180,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vys-Xu-idu">
-                                        <rect key="frame" x="88.333333333333329" y="181" width="188.66666666666669" height="34.333333333333343"/>
+                                        <rect key="frame" x="88.333333333333329" y="180.99999999999997" width="188.66666666666669" height="35"/>
                                         <color key="backgroundColor" red="0.49831533430000002" green="0.92568022009999995" blue="0.61955970530000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="tGF-yr-BKV"/>
@@ -208,7 +199,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NaI-hL-Wfn">
-                                        <rect key="frame" x="11" y="233.33333333333329" width="343" height="328.66666666666674"/>
+                                        <rect key="frame" x="11" y="233.99999999999997" width="343" height="328.66666666666663"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="328.67000000000002" id="aCj-Wr-QuQ"/>
@@ -221,16 +212,31 @@
                                     </tableView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4NK-x6-Phk">
+                                <rect key="frame" x="14.999999999999993" y="107" width="115.33333333333331" height="36"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJ8-P9-J3v">
+                                        <rect key="frame" x="0.0" y="0.0" width="64.666666666666671" height="36"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzX-4r-WBx">
+                                        <rect key="frame" x="64.666666666666686" y="1" width="50.666666666666657" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="calendar" catalog="system"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="plX-6c-c0c"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="t3C-CL-ZoX" firstAttribute="leading" secondItem="plX-6c-c0c" secondAttribute="leading" constant="5" id="2UN-ht-khH"/>
-                            <constraint firstItem="sJ8-P9-J3v" firstAttribute="leading" secondItem="plX-6c-c0c" secondAttribute="leading" constant="15" id="2bw-cw-P6I"/>
                             <constraint firstItem="plX-6c-c0c" firstAttribute="trailing" secondItem="t3C-CL-ZoX" secondAttribute="trailing" constant="5" id="AwL-rb-MbY"/>
                             <constraint firstItem="plX-6c-c0c" firstAttribute="bottom" secondItem="t3C-CL-ZoX" secondAttribute="bottom" constant="12" id="FtS-DW-WFL"/>
-                            <constraint firstItem="t3C-CL-ZoX" firstAttribute="top" secondItem="sJ8-P9-J3v" secondAttribute="bottom" constant="12" id="VUf-1H-aJ2"/>
-                            <constraint firstItem="sJ8-P9-J3v" firstAttribute="top" secondItem="plX-6c-c0c" secondAttribute="top" constant="60" id="xDZ-xw-MrG"/>
+                            <constraint firstItem="4NK-x6-Phk" firstAttribute="top" secondItem="plX-6c-c0c" secondAttribute="top" constant="60" id="S6c-Pp-fTa"/>
+                            <constraint firstItem="4NK-x6-Phk" firstAttribute="leading" secondItem="plX-6c-c0c" secondAttribute="leading" constant="15" id="XT6-4l-JfA"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Calendrier" image="calendar" catalog="system" id="0MY-UE-TaW" userLabel="Calendrier"/>
