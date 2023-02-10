@@ -9,10 +9,11 @@ import UIKit
 import FSCalendar
 
 class CalendarController: UIViewController {
-
+    
     // MARK: - Properties
     
     let date = Date()
+    let calendarSelectDayColor = "lightBlue"
     var calendar: FSCalendar!
     var cellReuseIdentifer = "eventCell"
     var formatter = DateFormatter()
@@ -26,14 +27,14 @@ class CalendarController: UIViewController {
     
     
     // MARK: - Lifecycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupCalendar()
-
+        
         dateOfTheDayLabel.text = displayDateOfTheDay()
-                
+        
         let nibName = UINib(nibName: "EventViewCell", bundle: nil)
         eventsTableView.register(nibName, forCellReuseIdentifier: cellReuseIdentifer)
         
@@ -42,19 +43,20 @@ class CalendarController: UIViewController {
     // MARK: - Methods
     
     func setupCalendar() {
-        calendarView.scope = .week
-        calendar?.locale = Locale(identifier: "ar")
         calendarView.delegate = self
         calendarView.dataSource = self
+        calendarView.scope = .week
         calendarView.firstWeekday = 2
-        //calendarView.appearance.headerMinimumDissolvedAlpha = 0
+        calendarView.appearance.weekdayFont = .preferredFont(forTextStyle: .subheadline)
+        calendarView.appearance.weekdayTextColor = .black
+        calendarView.appearance.weekdayFont = .systemFont(ofSize: 15, weight: .light)
         calendarView.appearance.borderRadius = 0.5
         calendarView.weekdayHeight = 40
-        calendarView.headerHeight = 22
-        calendarView.appearance.todayColor = .systemBlue
-        calendarView.clipsToBounds = false
+        calendarView.headerHeight = 20
+        calendarView.appearance.todayColor = .init(named: calendarSelectDayColor)
+        calendarView.appearance.todaySelectionColor = .init(named: calendarSelectDayColor)
+        calendarView.clipsToBounds = true
         calendarView.register(MyCell.self, forCellReuseIdentifier: "eventCell")
-
     }
     
     func displayDateOfTheDay() -> String {
@@ -76,6 +78,26 @@ extension CalendarController: FSCalendarDelegate, FSCalendarDataSource {
         dateOfTheDayLabel.text = formatter.string(from: date)
     }
     
+    func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
+        
+    }
+    
+    enum SelectionType {
+        case selected
+        case dateOfTheDay
+    }
+                
+   
+    class MyCell: FSCalendarCell {
+     
+ 
+        
+        
+        
+        
+    }
+    
+    
 }
 
 // TableView
@@ -96,15 +118,9 @@ extension CalendarController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-class MyCell: FSCalendarCell {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        self.contentView.addSubview(UIImageView(image: UIImage(named: "portrait_2")))
-    }
-    
-    required init!(coder aDecoder: NSCoder!) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
+
+
+
+
+
 

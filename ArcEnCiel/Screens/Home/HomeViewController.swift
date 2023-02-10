@@ -1,5 +1,5 @@
 //
-//  HomeController.swift
+//  HomeView.swift
 //  ArcEnCiel
 //
 //  Created by Nicolas Demange on 05/01/2023.
@@ -8,9 +8,11 @@
 import Foundation
 import UIKit
 
-class HomeController: UIViewController {
+class HomeViewController: UIViewController {
     
     // MARK: - Properties
+    
+    var homeViewModel: HomeViewModel!
     
     private let floatingButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
@@ -78,15 +80,13 @@ class HomeController: UIViewController {
         addEventVC.modalPresentationStyle = .formSheet
         
         present(addEventVC, animated: true, completion: .none)
-        
-        print("test")
     }
     
 }
 
 // MARK: Extensions
 
-extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == infoCollectionView {
