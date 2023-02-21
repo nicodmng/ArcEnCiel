@@ -10,8 +10,12 @@ import UIKit
 class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageProfilImage: UIImageView!
+    @IBOutlet weak var bodyTextView: UITextView!
     
-    
-    
-    
+    var mockData: MockData? {
+        didSet {
+            
+        }
+    }
+
 }

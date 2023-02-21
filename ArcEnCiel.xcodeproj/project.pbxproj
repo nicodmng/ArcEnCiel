@@ -32,10 +32,12 @@
 		44811594296C0F4F00FE3E73 /* DetailEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44811593296C0F4F00FE3E73 /* DetailEventController.swift */; };
 		44811598296C1C3600FE3E73 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44811597296C1C3600FE3E73 /* CollectionViewCell.swift */; };
 		4481159E296C4F2200FE3E73 /* EventViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4481159D296C4F2200FE3E73 /* EventViewCell.xib */; };
+		44AF1A25299A7F830027344F /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AF1A24299A7F830027344F /* CalendarViewModel.swift */; };
+		44AF1A28299B82970027344F /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AF1A27299B82970027344F /* MockData.swift */; };
+		44BA44C529A381DE006ADBA2 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BA44C429A381DE006ADBA2 /* CoreDataStack.swift */; };
 		44CF0B3729965984005316AE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CF0B3629965984005316AE /* HomeViewModel.swift */; };
 		44D961B72992612900F17AD5 /* ArcEnCiel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 44D961B52992612900F17AD5 /* ArcEnCiel.xcdatamodeld */; };
-		44D961BA2992617F00F17AD5 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D961B82992617F00F17AD5 /* User+CoreDataClass.swift */; };
-		44D961BB2992617F00F17AD5 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D961B92992617F00F17AD5 /* User+CoreDataProperties.swift */; };
+		44D961BA2992617F00F17AD5 /* ManagedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D961B82992617F00F17AD5 /* ManagedUser.swift */; };
 		44E7620129754EF50054C5DE /* FloatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E7620029754EF50054C5DE /* FloatButton.swift */; };
 		44F66BBE2966DA2400C6D0BE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F66BBD2966DA2400C6D0BE /* HomeViewController.swift */; };
 		44F66BC02966ECAC00C6D0BE /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F66BBF2966ECAC00C6D0BE /* SettingsController.swift */; };
@@ -88,10 +90,12 @@
 		44811593296C0F4F00FE3E73 /* DetailEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEventController.swift; sourceTree = "<group>"; };
 		44811597296C1C3600FE3E73 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		4481159D296C4F2200FE3E73 /* EventViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventViewCell.xib; sourceTree = "<group>"; };
+		44AF1A24299A7F830027344F /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		44AF1A27299B82970027344F /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		44BA44C429A381DE006ADBA2 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		44CF0B3629965984005316AE /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		44D961B62992612900F17AD5 /* ArcEnCiel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ArcEnCiel.xcdatamodel; sourceTree = "<group>"; };
-		44D961B82992617F00F17AD5 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		44D961B92992617F00F17AD5 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		44D961B82992617F00F17AD5 /* ManagedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedUser.swift; sourceTree = SOURCE_ROOT; };
 		44E7620029754EF50054C5DE /* FloatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatButton.swift; sourceTree = "<group>"; };
 		44F66BBD2966DA2400C6D0BE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		44F66BBF2966ECAC00C6D0BE /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
@@ -182,6 +186,7 @@
 		44243BBD2948C34500F75EC8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				44AF1A27299B82970027344F /* MockData.swift */,
 				44416A082964830300457DA6 /* User.swift */,
 				44416A0A2964831500457DA6 /* Event.swift */,
 				443012542971B47000918954 /* Team.swift */,
@@ -204,13 +209,12 @@
 		44243BBF2948C35900F75EC8 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				44AF1A26299A7F880027344F /* Calendar */,
 				44CF0B352996596D005316AE /* Home */,
 				44243BC02948C8D100F75EC8 /* LogInViewController.swift */,
-				44243B8D2948BF4A00F75EC8 /* CalendarController.swift */,
 				44416A0C2965659400457DA6 /* AddEventController.swift */,
 				44F66BBF2966ECAC00C6D0BE /* SettingsController.swift */,
 				44811593296C0F4F00FE3E73 /* DetailEventController.swift */,
-				44811597296C1C3600FE3E73 /* CollectionViewCell.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -225,11 +229,20 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		44AF1A26299A7F880027344F /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				44243B8D2948BF4A00F75EC8 /* CalendarController.swift */,
+				44AF1A24299A7F830027344F /* CalendarViewModel.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
 		44CF0B352996596D005316AE /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				44CF0B3629965984005316AE /* HomeViewModel.swift */,
 				44F66BBD2966DA2400C6D0BE /* HomeViewController.swift */,
+				44CF0B3629965984005316AE /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -237,8 +250,8 @@
 		44D961A029924A7400F17AD5 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				44D961B82992617F00F17AD5 /* User+CoreDataClass.swift */,
-				44D961B92992617F00F17AD5 /* User+CoreDataProperties.swift */,
+				44D961B82992617F00F17AD5 /* ManagedUser.swift */,
+				44BA44C429A381DE006ADBA2 /* CoreDataStack.swift */,
 				44D961B52992612900F17AD5 /* ArcEnCiel.xcdatamodeld */,
 			);
 			path = CoreData;
@@ -249,6 +262,7 @@
 			children = (
 				4481159D296C4F2200FE3E73 /* EventViewCell.xib */,
 				44109B5F297A9A8300F92408 /* InfoViewCell.xib */,
+				44811597296C1C3600FE3E73 /* CollectionViewCell.swift */,
 				44109B61297AA28700F92408 /* NextEventViewCell.xib */,
 			);
 			path = "Cell View";
@@ -397,9 +411,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				44F66BC22967251700C6D0BE /* CornerRadiusExtension.swift in Sources */,
+				44BA44C529A381DE006ADBA2 /* CoreDataStack.swift in Sources */,
 				44416A07296447F300457DA6 /* CircularImageView.swift in Sources */,
+				44AF1A28299B82970027344F /* MockData.swift in Sources */,
 				443012552971B47000918954 /* Team.swift in Sources */,
-				44D961BA2992617F00F17AD5 /* User+CoreDataClass.swift in Sources */,
+				44D961BA2992617F00F17AD5 /* ManagedUser.swift in Sources */,
 				44243BC12948C8D100F75EC8 /* LogInViewController.swift in Sources */,
 				44416A0D2965659400457DA6 /* AddEventController.swift in Sources */,
 				44416A092964830300457DA6 /* User.swift in Sources */,
@@ -415,7 +431,7 @@
 				44CF0B3729965984005316AE /* HomeViewModel.swift in Sources */,
 				44416A0B2964831500457DA6 /* Event.swift in Sources */,
 				4430125A2971B4D800918954 /* Alert.swift in Sources */,
-				44D961BB2992617F00F17AD5 /* User+CoreDataProperties.swift in Sources */,
+				44AF1A25299A7F830027344F /* CalendarViewModel.swift in Sources */,
 				44243B8C2948BF4A00F75EC8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

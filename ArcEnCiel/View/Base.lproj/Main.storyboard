@@ -446,7 +446,7 @@
         <!--Home-->
         <scene sceneID="OvX-Hn-1LY">
             <objects>
-                <viewController id="vOq-lU-sAI" customClass="HomeController" customModule="ArcEnCiel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vOq-lU-sAI" customClass="HomeViewController" customModule="ArcEnCiel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T2a-GH-y5K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -652,7 +652,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dna-ae-gid">
-                                                                <rect key="frame" x="120" y="0.0" width="110" height="38"/>
+                                                                <rect key="frame" x="120" y="0.0" width="95" height="38"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="110" id="pnx-xE-NGN"/>
                                                                 </constraints>
@@ -667,7 +667,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VlS-vV-b8G">
-                                                                <rect key="frame" x="240" y="0.0" width="95" height="38"/>
+                                                                <rect key="frame" x="225" y="0.0" width="110" height="38"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="110" id="RMx-lv-kA7"/>
                                                                 </constraints>
@@ -705,7 +705,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uct-iO-Y64">
-                                                                <rect key="frame" x="120" y="0.0" width="110" height="38"/>
+                                                                <rect key="frame" x="120" y="0.0" width="95" height="38"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="hgd-zA-vKh"/>
                                                                 </constraints>
@@ -720,7 +720,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZ5-lK-c43">
-                                                                <rect key="frame" x="240" y="0.0" width="95" height="38"/>
+                                                                <rect key="frame" x="225" y="0.0" width="110" height="38"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="Mgg-OU-fn2"/>
                                                                 </constraints>

@@ -25,8 +25,6 @@ class AddEventController: UIViewController {
         circleGreenButtonApparence(sender: sender)
     }
     
-
-    
     @IBAction func recurrenceButton(_ sender: UIButton) {
         
     }

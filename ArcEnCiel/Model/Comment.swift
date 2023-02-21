@@ -11,6 +11,7 @@ struct Comment {
     
     var id: String
     var userId: String
-    var date: Date
-    var message: String
+    var user: String
+    var date: Date?
+    var text: String
 }

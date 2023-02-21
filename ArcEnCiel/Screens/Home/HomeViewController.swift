@@ -13,6 +13,7 @@ class HomeViewController: UIViewController {
     // MARK: - Properties
     
     var homeViewModel: HomeViewModel!
+    var mockData = [MockData]()
     
     private let floatingButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
@@ -43,9 +44,6 @@ class HomeViewController: UIViewController {
     @IBAction func profilButton(_ sender: UIButton) {
         print("Test button OK")
     }
-    
-    
-    
     
     // MARK: - Lifecycle
     
@@ -97,10 +95,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return CGSize()
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == infoCollectionView {
-            return 10
+            return mockData.count
         } else if collectionView == nextEventCollectionView {
             return 5
         }

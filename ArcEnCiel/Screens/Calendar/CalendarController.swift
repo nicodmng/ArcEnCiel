@@ -50,13 +50,13 @@ class CalendarController: UIViewController {
         calendarView.appearance.weekdayFont = .preferredFont(forTextStyle: .subheadline)
         calendarView.appearance.weekdayTextColor = .black
         calendarView.appearance.weekdayFont = .systemFont(ofSize: 15, weight: .light)
-        calendarView.appearance.borderRadius = 0.5
+//        calendarView.appearance.borderRadius = 0.5
         calendarView.weekdayHeight = 40
-        calendarView.headerHeight = 20
+//        calendarView.headerHeight = 20
         calendarView.appearance.todayColor = .init(named: calendarSelectDayColor)
-        calendarView.appearance.todaySelectionColor = .init(named: calendarSelectDayColor)
-        calendarView.clipsToBounds = true
-        calendarView.register(MyCell.self, forCellReuseIdentifier: "eventCell")
+//        calendarView.appearance.todaySelectionColor = .init(named: calendarSelectDayColor)
+//        calendarView.clipsToBounds = true
+        calendarView.register(CalendarCell.self, forCellReuseIdentifier: "cell")
     }
     
     func displayDateOfTheDay() -> String {
@@ -66,6 +66,28 @@ class CalendarController: UIViewController {
         return dateString
     }
 }
+
+
+class CalendarCell: FSCalendarCell {
+    
+    required init!(coder aDecoder: NSCoder!) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+    }
+    
+    private func commonInit() {
+        let todayLayer = CAShapeLayer()
+        todayLayer.fillColor = UIColor.clear.cgColor
+        
+    }
+    
+}
+
 
 // MARK: - Extensions
 
@@ -86,18 +108,7 @@ extension CalendarController: FSCalendarDelegate, FSCalendarDataSource {
         case selected
         case dateOfTheDay
     }
-                
-   
-    class MyCell: FSCalendarCell {
-     
- 
-        
-        
-        
-        
-    }
-    
-    
+
 }
 
 // TableView
@@ -117,10 +128,3 @@ extension CalendarController: UITableViewDelegate, UITableViewDataSource {
         return 250
     }
 }
-
-
-
-
-
-
-

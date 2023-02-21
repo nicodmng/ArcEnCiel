@@ -18,18 +18,11 @@ class DetailEventController: UIViewController {
     
     
     @IBOutlet weak var teamLabel: UILabel!
-    
     @IBOutlet weak var dateLabel: UILabel!
-    
     @IBOutlet weak var hourLabel: UILabel!
-    
     @IBOutlet weak var commentsTextView: UITextView!
-    
-    
     @IBOutlet weak var validateButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
-    
-    
     
     @IBAction func closeButton(_ sender: UIButton) {
         dismiss(animated: true)
@@ -50,8 +43,6 @@ extension DetailEventController: UICollectionViewDelegate, UICollectionViewDataS
         cell.imageProfilImage.image = UIImage(named: imageProfil[indexPath.row])
         return cell
     }
-    
-    
     
     
 }

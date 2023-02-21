@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="infoCell" id="c0z-2m-6QW">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="infoCell" id="c0z-2m-6QW" customClass="CollectionViewCell" customModule="ArcEnCiel" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="243" height="182"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="CHi-Si-vAS">
@@ -47,8 +47,6 @@
                                     <constraint firstAttribute="height" constant="92" id="ABX-rX-cJr"/>
                                     <constraint firstAttribute="width" constant="205" id="GUc-v3-cba"/>
                                 </constraints>
-                                <string key="text">La braderie de Noël aura lieu à l’arande le 9 décembre prochain.
-N’oubliez pas de prévenir vos proches.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -81,6 +79,9 @@ N’oubliez pas de prévenir vos proches.</string>
                     <real key="value" value="10"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="bodyTextView" destination="93K-Lv-HtK" id="vtr-N0-Mzq"/>
+            </connections>
             <point key="canvasLocation" x="133.58778625954199" y="-240.14084507042256"/>
         </collectionViewCell>
     </objects>
