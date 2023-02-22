@@ -25,6 +25,9 @@ class CalendarController: UIViewController {
     
     @IBOutlet weak var eventsTableView: UITableView!
     
+    @IBOutlet weak var generalViewCalendar: UIView!
+    
+    
     
     // MARK: - Lifecycle
     
@@ -38,6 +41,14 @@ class CalendarController: UIViewController {
         let nibName = UINib(nibName: "EventViewCell", bundle: nil)
         eventsTableView.register(nibName, forCellReuseIdentifier: cellReuseIdentifer)
         
+        generalViewCalendar.layer.shadowColor = UIColor.black.cgColor
+        generalViewCalendar.layer.shadowOpacity = 0.3
+        generalViewCalendar.layer.shadowOffset = .zero
+        generalViewCalendar.layer.shadowRadius = 3
+        generalViewCalendar.layer.shadowPath = UIBezierPath(rect: generalViewCalendar.bounds).cgPath
+        generalViewCalendar.layer.shouldRasterize = true
+        generalViewCalendar.layer.rasterizationScale = UIScreen.main.scale
+
     }
     
     // MARK: - Methods
@@ -45,18 +56,21 @@ class CalendarController: UIViewController {
     func setupCalendar() {
         calendarView.delegate = self
         calendarView.dataSource = self
-        calendarView.scope = .week
+        
+        // Calendar settings
+        calendarView.scope = .month
         calendarView.firstWeekday = 2
-        calendarView.appearance.weekdayFont = .preferredFont(forTextStyle: .subheadline)
+        calendarView.placeholderType = .fillHeadTail
+        
+        
+        // Calendar color
+        calendarView.appearance.headerTitleColor = .darkGray
+        calendarView.appearance.titleFont = .systemFont(ofSize: 15, weight: .light)
         calendarView.appearance.weekdayTextColor = .black
-        calendarView.appearance.weekdayFont = .systemFont(ofSize: 15, weight: .light)
-//        calendarView.appearance.borderRadius = 0.5
-        calendarView.weekdayHeight = 40
-//        calendarView.headerHeight = 20
+        calendarView.appearance.weekdayFont = .systemFont(ofSize: 17, weight: .medium)
         calendarView.appearance.todayColor = .init(named: calendarSelectDayColor)
-//        calendarView.appearance.todaySelectionColor = .init(named: calendarSelectDayColor)
-//        calendarView.clipsToBounds = true
-        calendarView.register(CalendarCell.self, forCellReuseIdentifier: "cell")
+        
+
     }
     
     func displayDateOfTheDay() -> String {
