@@ -197,6 +197,9 @@
                                         <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system">
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="precedentButton:" destination="FIu-gZ-KAR" eventType="touchUpInside" id="byC-zK-sI9"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IpV-hO-hqJ" userLabel="nextButton">
                                         <rect key="frame" x="35" y="0.0" width="30" height="30"/>
@@ -208,6 +211,9 @@
                                         <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system">
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="nextButton:" destination="FIu-gZ-KAR" eventType="touchUpInside" id="bIF-cj-BIV"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

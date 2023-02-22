@@ -22,12 +22,16 @@ class CalendarController: UIViewController {
     
     @IBOutlet weak var dateOfTheDayLabel: UILabel!
     @IBOutlet weak var calendarView: FSCalendar!
-    
     @IBOutlet weak var eventsTableView: UITableView!
-    
     @IBOutlet weak var generalViewCalendar: UIView!
     
+    @IBAction func precedentButton(_ sender: UIButton) {
+        calendarView.setCurrentPage(getPrecedentMonth(date: calendarView.currentPage), animated: true)
+    }
     
+    @IBAction func nextButton(_ sender: UIButton) {
+        calendarView.setCurrentPage(getNextMont(date: calendarView.currentPage), animated: true)
+    }
     
     // MARK: - Lifecycle
     
@@ -69,8 +73,6 @@ class CalendarController: UIViewController {
         calendarView.appearance.weekdayTextColor = .black
         calendarView.appearance.weekdayFont = .systemFont(ofSize: 17, weight: .medium)
         calendarView.appearance.todayColor = .init(named: calendarSelectDayColor)
-        
-
     }
     
     func displayDateOfTheDay() -> String {
@@ -79,6 +81,15 @@ class CalendarController: UIViewController {
         let dateString = formatter.string(from: date)
         return dateString
     }
+    
+    func getPrecedentMonth(date: Date) -> Date {
+        return Calendar.current.date(byAdding: .month, value: -1, to: date)!
+    }
+    
+    func getNextMont(date: Date) -> Date {
+        return Calendar.current.date(byAdding: .month, value: 1, to: date)!
+    }
+    
 }
 
 
@@ -97,11 +108,9 @@ class CalendarCell: FSCalendarCell {
     private func commonInit() {
         let todayLayer = CAShapeLayer()
         todayLayer.fillColor = UIColor.clear.cgColor
-        
     }
     
 }
-
 
 // MARK: - Extensions
 
